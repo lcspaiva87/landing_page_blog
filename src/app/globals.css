@@ -2,8 +2,28 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@theme {
+  --color-blue-100: #7EA4D7;
+  --color-blue-200: #2C85FC;
+  --color-blue-300: #2266C1;
+  --color-blue-400: #0D284C;
 
+  --color-cyan-100: #2DEBFC;
+  --color-cyan-200: #187D86;
+  --color-cyan-300: #0E474C;
+
+  --color-gray-100: #E9EAEC;
+  --color-gray-200: #D3D5D9;
+  --color-gray-300: #93979E;
+  --color-gray-400: #20242C;
+  --color-gray-500: #16181D;
+  --color-gray-600: #14161A;
+  --color-gray-700: #101216;
+  --color-gray-800: #0B0C0F;
+}
 @theme inline {
+
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -117,6 +137,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gray-700 text-foreground;
   }
 }
