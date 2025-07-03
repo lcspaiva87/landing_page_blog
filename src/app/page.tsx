@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/footer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -101,6 +102,8 @@ export default function Home() {
         <Button
           variant="share"
         >Click me</Button>
+
+        <Footer />
       </footer>
     </div>
   );
