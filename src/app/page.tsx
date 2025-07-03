@@ -1,64 +1,34 @@
 import Footer from "@/components/footer/footer";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+
 import { Header } from "./_components/header";
+import { CardsCustom } from "@/components/cards-custom";
 
 export default function Home() {
+  const cards = [
+    {
+      title: "Crie um catálogo de produtos online em poucos minutos",
+      badge: "simples",
+    },
+    {
+      title: "Venda para seu público através de uma plataforma única",
+      badge: "prático",
+    },
+    {
+      title: "Tenha uma loja online personalizada com a cara da sua marca",
+      badge: "personalizável",
+    },
+  ]
   return (
-    <div className="">
+    <div className="flex flex-col gap-20">
       <Header />
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-        <Button
-          variant="share"
-        >Click me</Button>
+      <div className="grid grid-cols-2 gap-6 px-52">
+        {cards.map((card) => (
+          <CardsCustom key={card.title} title={card.title} badge={card.badge} />
+        ))}
+      </div>
 
-        <Footer />
-      </footer>
+      <Footer />
+
     </div>
   );
 }
