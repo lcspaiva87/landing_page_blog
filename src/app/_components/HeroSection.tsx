@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <div className="flex  gap-10 px-52 justify-between items-center">
-      <div className=" flex-col gap-10 flex w-[640px]">
-        <h1 className="heading-hg text-white w-">
+    <div className="flex   gap-10 px-4 md:px-52 justify-between items-center  ">
+      <div className=" flex-col gap-10 flex w-[640px] items-center md:items-start">
+        <h1 className="text-lg md:text-hg text-white  text-center w-80 md:w-full ">
           Venda seus produtos como afiliado em um único lugar
         </h1>
         <div className="flex flex-col gap-2">
@@ -30,7 +30,7 @@ export function HeroSection() {
           </span>
         </div>
       </div>
-      <img src={heroImage.src} alt="hero" className="w-lg h-lg  border border-cyan-300 rounded-full" />
+      <img src={heroImage.src} alt="hero" className="w-lg h-lg  border border-cyan-300 rounded-full hidden md:block" />
 
 
     </div>

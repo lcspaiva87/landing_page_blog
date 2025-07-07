@@ -37,7 +37,7 @@ export default function Home() {
     <div className="flex flex-col gap-20">
       <Header />
       <HeroSection />
-      <div className="grid grid-cols-2 gap-6 px-52 w-full">
+      <div className="flex flex-col md:grid  md:grid-cols-2 gap-6 px-4 md:px-52 w-full">
         {cards.map((card, idx) => (
           <CardsCustom
             key={card.title}

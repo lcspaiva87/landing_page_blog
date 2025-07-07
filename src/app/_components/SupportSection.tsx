@@ -8,7 +8,7 @@ export const SupportSection = () => {
           Sua loja de afiliados, simples, do jeito que deveria ser
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
           {/* Primeiro Card */}
           <div className="flex flex-col text-left gap-2 rounded-lg p-6 md:p-12 bg-blue-400">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-300 mb-4">

@@ -30,7 +30,7 @@ export function Header() {
     },
   });
   return (
-    <header className=" border-b border-gray-300 px-52 flex items-center justify-between h-24 " >
+    <header className=" border-b border-gray-300 px-4 md:px-52 flex items-center justify-between h-24 " >
       <img src={logo.src} alt="logo" width={100} height={100} />
       <div className="flex items-center gap-4">
         {links.map((link) => (
