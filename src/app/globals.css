@@ -62,7 +62,42 @@
   --radius-lg: var(--radius);
   --radius-xl: calc( 4px);
   --radius-2xl: calc( 8px);
+
+  --text-hg: 40px;
+  --text-hg--line-height: 1.2;
+  --text-hg--font-weight: 700;
+
+  --text-xl: 32px;
+  --text-xl--line-height: 1.2;
+  --text-xl--font-weight: 700;
+
+  --text-lg: 28px;
+  --text-lg--line-height: 1.2;
+  --text-lg--font-weight: 700;
+
+  --text-md: 24px;
+  --text-md--line-height: 1.2;
+  --text-md--font-weight: 700;
+
+  --text-sm: 20px;
+  --text-sm--line-height: 1.2;
+  --text-sm--font-weight: 700;
+
+  --text-xs: 16px;
+  --text-xs--line-height: 1.2;
+  --text-xs--font-weight: 700;
+
+
+  --text-body-md: 16px;
+  --text-body-sm: 14px ;
+  --text-body-xs: 12px ;
+
+  --body-tag: 12px 100%/400;
+
+  --action-md: 16px normal/500;
+  --action-sm: 14px normal/500;
 }
+
 
 :root {
   --radius: 0.625rem;
