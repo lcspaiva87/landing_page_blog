@@ -4,6 +4,7 @@ import { CardsCustom } from "@/components/cards-custom";
 import home from "../../public/assets/feature.svg"
 import { HeroSection } from "./_components/HeroSection";
 import { SupportSection } from "./_components/SupportSection";
+import { CustomerStorySection } from "./_components/CustomerStorySection ";
 
 export default function Home() {
   const cards: {
@@ -50,6 +51,7 @@ export default function Home() {
         ))}
       </div>
       <SupportSection />
+      <CustomerStorySection />
       <Footer />
 
     </div>
