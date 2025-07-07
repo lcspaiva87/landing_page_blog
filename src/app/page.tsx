@@ -2,8 +2,7 @@ import Footer from "@/components/footer/footer";
 import { Header } from "./_components/header";
 import { CardsCustom } from "@/components/cards-custom";
 import home from "../../public/assets/feature.svg"
-import heroImage from "../../public/assets/background-hero.png"
-import { Clock, Store } from "lucide-react";
+import { HeroSection } from "./_components/HeroSection";
 
 export default function Home() {
   const cards: {
@@ -35,26 +34,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-20">
       <Header />
-      <div className="flex  gap-10 px-52 justify-between items-center">
-        <div className=" flex-col gap-10 flex w-[640px]">
-          <h1 className="heading-hg text-white w-">
-            Venda seus produtos como afiliado em um único lugar
-          </h1>
-          <div className="flex flex-col gap-2">
-            <span className="flex  text-white font-light  gap-2">
-              <Clock className="w-5 h-5 text-cyan-100" />
-              Crie o seu site em menos de 5 minutos
-            </span>
-            <span className="flex  text-white font-light gap-2">
-              <Store className="w-5 h-5 text-cyan-100" />
-              Acompanhe e otimize seu negócio online
-            </span>
-          </div>
-        </div>
-        <img src={heroImage.src} alt="hero" className="w-lg h-lg  border border-cyan-300 rounded-full" />
-
-
-      </div>
+      <HeroSection />
       <div className="grid grid-cols-2 gap-6 px-52 w-full">
         {cards.map((card, idx) => (
           <CardsCustom
