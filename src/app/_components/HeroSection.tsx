@@ -1,39 +1,62 @@
+'use client'
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Clock, Store } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import heroImage from "../../../public/assets/background-hero.png"
-import { ArrowRight, Clock, Store } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
-export function HeroSection() {
+
+export const HeroSection = () => {
   return (
-    <div className="flex   gap-10 px-4 md:px-52 justify-between items-center  ">
-      <div className=" flex-col gap-10 flex w-[640px] items-center md:items-start">
-        <h1 className="text-lg md:text-hg text-white  text-center w-80 md:w-full ">
-          Venda seus produtos como afiliado em um único lugar
-        </h1>
-        <div className="flex flex-col gap-2">
-          <span className="flex  text-gray-200 font-light  gap-2">
-            <Clock className="w-5 h-5 text-cyan-100" />
-            Crie o seu site em menos de 5 minutos
-          </span>
-          <span className="flex  text-gray-200 font-light gap-2">
-            <Store className="w-5 h-5 text-cyan-100" />
-            Acompanhe e otimize seu negócio online
-          </span>
+    <section className="container relative flex items-center justify-center mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[20rem] md:h-[36rem] items-center">
+        <div className="flex flex-col items-center justify-center gap-4 md:items-start lg:items-start">
+          <h1 className="text-gray-100 text-heading-hg font-sans">
+            Venda seus produtos como afiliado em um único lugar
+          </h1>
+
+          <div className="flex flex-col items-center justify-center gap-4 md:items-start lg:items-start">
+            <div>
+              <div className="flex items-center gap-2">
+                <Clock className="text-cyan-100 h-4 w-4" />
+                <span className="text-body-md text-gray-200">
+                  Crie o seu site em menos de 5 minutos
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Store className="text-cyan-100 h-4 w-4" />
+                <span className="text-body-md text-gray-200">
+                  Acompanhe e otimize seu negócio online
+                </span>
+              </div>
+            </div>
+
+            <div className="text-white flex flex-col gap-2 mt-5 items-center md:items-start ls:items-start">
+              <Button className="rounded-full w-fit" asChild>
+                <Link href="/criar-loja">
+                  Criar loja grátis
+                  <ArrowRight />
+                </Link>
+              </Button>
+
+              <p className="text-gray-300 text-body-xs">
+                Não precisa de cartão de crédito
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-2 ">
-          <Button
-            className="bg-blue-300 w-48 ">
-            Criar loja grátis
-            <ArrowRight className="w-4 h-4" />
-          </Button>
-          <span className="text-gray-300  text-[12px] font-bold">
-            Não precisa de cartão de crédito
-          </span>
+
+        <div className="relative h-[20rem] hidden md:h-full order-first md:order-last items-center justify-center md:flex lg:flex">
+          <Image
+            src={heroImage.src}
+            alt="Ilustração com ícones de store, tag e sacola"
+            width={200}
+            height={400}
+            className="h-full w-auto object-contain"
+          />
         </div>
       </div>
-      <img src={heroImage.src} alt="hero" className="w-lg h-lg  border border-cyan-300 rounded-full hidden md:block" />
-
-
-    </div>
-  )
-
-}
+    </section>
+  );
+};
