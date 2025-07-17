@@ -4,7 +4,7 @@ export const SupportSection = () => {
     <section className="relative pb-8 md:py-10 bg-gray-700">
       <div className="absolute inset-0 hidden md:block bg-[url('/background.svg')] bg-cover bg-center bg-no-repeat opacity-90" />
       <div className="container flex flex-col items-center gap-12 relative">
-        <h2 className="font-sans text-balance text-center text-xl text-gray-100">
+        <h2 className="font-sans text-balance text-center text-heading-xl text-gray-100">
           Sua loja de afiliados, simples, do jeito que deveria ser
         </h2>
 
