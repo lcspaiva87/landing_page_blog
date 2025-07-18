@@ -1,6 +1,6 @@
-import { Inter, PT_Sans_Caption } from 'next/font/google';
 import './styles/globals.css';
 import type { Metadata } from 'next';
+import { Layout } from '@/components/layout/layout';
 
 export const metadata: Metadata = {
   title: 'Site.Set',
@@ -22,20 +22,8 @@ export const metadata: Metadata = {
     ],
   },
 };
-type LayoutProps = {
-  children: React.ReactNode;
-};
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-inter',
-});
-const ptSansCaption = PT_Sans_Caption({
-  subsets: ['latin'],
-  weight: '700',
-  variable: '--font-sans',
-});
+
 export default function RootLayout({
   children,
 }: {
@@ -44,10 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={`${inter.className} ${ptSansCaption.className} relative flex min-h-screen flex-col bg-gray-700`}>
-
-          {children}
-        </div>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
